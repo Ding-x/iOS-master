@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.SingleBookActivity">
+
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <ImageView
+            android:id="@+id/singleBookImg"
+            android:layout_width="180dp"
+            android:layout_height="220dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="30dp"
+            android:contentDescription="TODO"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/singleBookTitle"
+            android:layout_width="300dp"
+            android:layout_height="110dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="40dp"
+            android:text="Programming: Principles and Practice Using C++ (2nd Edition)"
+            android:textSize="23dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/singleBookImg"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/singleBookAuthor"
+            android:layout_width="300dp"
+            android:layout_height="65dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="5dp"
+            android:text="by Bjarne Stroustrup"
+            android:textSize="17dp"
+            android:textStyle="italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/singleBookImg"
+            app:layout_constraintTop_toBottomOf="@+id/singleBookTitle" />
+
+
+        <TextView
+            android:id="@+id/singleBookPrice"
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="5dp"
+            android:text="$ 25.86"
+            android:textColor="#b92646"
+            android:textSize="23dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/singleBookImg"
+            app:layout_constraintTop_toBottomOf="@+id/singleBookAuthor" />
+
+        <TextView
+            android:id="@+id/singleBookSellerName"
+            android:layout_width="280dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="48dp"
+            android:layout_marginStart="48dp"
+            android:layout_marginTop="40dp"
+            android:text="Sold by Tianhua Xu"
+            android:textSize="22dp"
+            android:textStyle="normal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/singleBookImg" />
+
+        <TextView
+            android:id="@+id/singleBookCategory"
+            android:layout_width="520dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="48dp"
+            android:layout_marginStart="48dp"
+            android:layout_marginTop="10dp"
+            android:text="category"
+            android:textSize="20dp"
+            android:textStyle="normal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/singleBookSellerName" />
+
+        <RatingBar
+            android:id="@+id/ratingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="30dp"
+            android:isIndicator="true"
+            android:maxWidth="200dp"
+            android:numStars="5"
+            android:rating="4.3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/singleBookSellerName"
+            app:layout_constraintTop_toBottomOf="@+id/singleBookImg" />
+
+        <TextView
+            android:id="@+id/singleBookDes"
+            android:layout_width="540dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/text_style"
+            android:text="aaa"
+            android:textSize="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/singleBookCategory" />
+
+        <Button
+            android:id="@+id/singleBookAddToCart"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="50dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/buy_button_style"
+            android:onClick="buttonAdd"
+            android:text="Add to Shopping Cart"
+            android:textColor="#ffffff"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/singleBookDes"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <Button
+            android:id="@+id/viewShoppingCart"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="50dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/button_style"
+            android:onClick="btnSingleToShoppingCart"
+            android:text="View Shopping Cart"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/singleBookDes"
+            app:layout_constraintVertical_bias="1.0" />
+
+
+    </android.support.constraint.ConstraintLayout>
+
+</ScrollView>
